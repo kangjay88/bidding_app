@@ -1,0 +1,20 @@
+version: "4.32"
+services: 
+  bid-app-db:
+    image: postgres #took image from docker hub, connects to postgres container
+    restart: always
+    container_name: bid-app-db
+    environment: 
+      POSTGRES_PASSWORD: example
+      PGDATA: /data/postgres #optional env variable that points to the data directory
+    ports: 
+      - "5432:5432" # laptop port : docker host port
+    volumes: 
+      - postgres:/data/postgres
+      # volumes are mounted, inside the postgres image container, there is a file system that you can 
+      # mount to your own filesystem here
+
+volumes: 
+  postgres:
+  # "Inside this image at directory /data/postgres, I want you to mount to this volume I have created above"
+  # Docker will say this is where I store the database information
