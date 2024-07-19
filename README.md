@@ -141,6 +141,7 @@ To run this project, you will need to add the following environment variables to
 #### 4. env.ts
 #### 5. create schema.ts, drizzle.config.ts, define env variables, push db changes
 #### 6. Create db drizzle shortcuts on package.json
+####
 
 ### At this point, you should have connect your nextjs app to your local database and orm
 <!-- Prerequisites -->
